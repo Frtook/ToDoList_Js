@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 80%;
+  background-color: #f6f6f6;
+  margin: 20px auto;
+}
+.container > .add-task {
+  padding: 20px;
+  background-color: #008888;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container > .add-task > input {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  flex-grow: 1;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+.container > .add-task > input:focus {
+  outline: none;
+}
+.container > .add-task input::-moz-placeholder {
+  color: #eee;
+}
+.container > .add-task input::placeholder {
+  color: #eee;
+}
+.container > .add-task > span {
+  background-color: white;
+  width: 43px;
+  color: #008888;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  font-size: 43px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container > .add-task > span:hover {
+  transform: rotate(90deg);
+}
+.container > .tasks {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.container > .tasks > div {
+  padding: 10px;
+  background-color: rgba(230, 230, 230, 0.9019607843);
+}
+.container > .tasks .no-task {
+  color: #444;
+}
+.container > .tasks > .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container > .tasks > .task > p {
+  font-size: 20px;
+}
+.container > .tasks > .task > .button {
+  display: flex;
+  gap: 5px;
+}
+.container > .tasks > .task > .button > span {
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.container > .tasks > .task > .button > .delete {
+  background-color: #e91e63;
+}
+.container > .tasks > .task > .button > .done {
+  background-color: #4caf50;
+}
+.container > .tasks .task.done {
+  order: 1;
+}
+.container > .tasks .task.done > p {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.number {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.number .num-task > span {
+  background-color: #e91e63;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+}
+.number .num-complate > span {
+  background-color: #2196f3;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.error {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: #eee;
+  padding: 20px;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  transition: 0.3s;
+  z-index: -1;
+}
+.error > div {
+  font-size: 40px;
+  border: 3px solid #f44336;
+  color: #f44336;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+.error > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.error > span {
+  color: #444;
+}
+.error > button {
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.error > button:hover {
+  background-color: rgba(0, 150, 136, 0.8);
+}
+
+.error.show {
+  opacity: 1;
+  z-index: 1;
+}
+
+.del-comp {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 14px;
+}
+.del-comp > span {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.del-comp :first-child {
+  background-color: #e91e63;
+}
+.del-comp :last-child {
+  background-color: #2196f3;
+}/*# sourceMappingURL=main.css.map */
